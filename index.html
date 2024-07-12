@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    
+    <head>
+        <h1>Welcome to DOM</h1>
+    </head>
+   <section>
+    <h1>Navbar </h1>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Profile</li>
+    </ul>
+
+   </section>
+   <section>
+        <h1 id="channel-heading">Welcome to my channel</h1>
+        <ul>
+            <li class="list">Video 1</li>
+            <li class="list">Video 1</li>
+            <li class="list">Video 2</li>
+            <li class="list">Video 3</li>
+            <li class="list">Video 4</li>
+        </ul>
+   </section>
+
+
+
+    <script src="./JS/dom.js"></script>
+    <script>
+        const listCollection = document.getElementsByTagName('li');
+        console.log(listCollection);
+
+        for(const li of listCollection){
+            console.log(li);
+            console.log(li.innerText);
+        }
+
+
+        const headingList = document.getElementsByTagName('h1');
+        for(const h1 of headingList){
+            console.log(h1.innerText);
+        }
+
+        const list =  document.getElementsByClassName('list');
+        console.log(list);
+        
+        for(const li of list){
+            console.log(li.innerText);
+        }
+    </script>
+</body>
+</html>
